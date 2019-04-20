@@ -51,7 +51,7 @@ class Scheduler {
       node.next = current;
     } else {
       while (current !== null && node.expectedAt > current.expectedAt) {
-        console.log("current, ", current);
+        // console.log("current, ", current);
         prev = current;
         current = current.next;
       }
@@ -59,11 +59,12 @@ class Scheduler {
       node.next = current;
     }
     this.count++;
+    console.log(this.queue);
     return this.queue;
   }
 
   numberOfScheduled() {
-    console.log("count", this.count);
+    // console.log("count", this.count);
     return this.count;
   }
 
@@ -107,11 +108,11 @@ class Scheduler {
 
 let mySchedule = new Scheduler();
 
-mySchedule.schedule(sayHi, 1000);
-mySchedule.schedule(sayHello, 2000);
-mySchedule.schedule(beSlow, 3000);
+mySchedule.schedule(sayHi, 3000);
+mySchedule.schedule(sayHello, 500);
+// mySchedule.schedule(beSlow, 1000);
 mySchedule.numberOfScheduled();
 
-console.log(typeof mySchedule.queue.expectedAt);
+// console.log(typeof mySchedule.queue.expectedAt);
 
 module.exports = { sayHi, sayHello, beSlow, Scheduler };

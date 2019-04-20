@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "eslint": "^5.16.0",
     "gitignore": "^0.6.0",
     "jest": "^24.7.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest --verbose --coverage --watchAll"
+    "lint": "eslint **/*.js",
+    "test": "jest --verbose --coverage",
+    "test-watch": "jest --verbose --coverage --watchAll"
   },
   "repository": {
     "type": "git",
