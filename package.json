@@ -1,0 +1,24 @@
+{
+  "name": "set-timeout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gitignore": "^0.6.0",
+    "jest": "^24.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest --verbose --coverage --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hingham/settimeout-priority-queue.git"
+  },
+  "author": "hannah ingham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hingham/settimeout-priority-queue/issues"
+  },
+  "homepage": "https://github.com/hingham/settimeout-priority-queue#readme"
+}
