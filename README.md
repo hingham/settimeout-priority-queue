@@ -1,4 +1,4 @@
-## Schedule Functions called with `setTimeout`
+## JavaScript Event Scheduling System
 
 [![Build Status](https://www.travis-ci.com/hingham/settimeout-priority-queue.svg?branch=master)](https://www.travis-ci.com/hingham/settimeout-priority-queue)
 
