@@ -1,4 +1,7 @@
 ## Schedule Functions called with `setTimeout`
+
+[![Build Status](https://www.travis-ci.com/hingham/settimeout-priority-queue.svg?branch=master)](https://www.travis-ci.com/hingham/settimeout-priority-queue)
+
 ##### Problem Domain:
 Design a system for tracking when functions called with setTimeout will be fired. Include methods that allow you to cancel all functions, see what function will be fired next, and see the number of funtions set to be called in the future. 
 
