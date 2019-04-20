@@ -6,9 +6,9 @@
 Design a system for tracking when functions called with setTimeout will be fired. Include methods that allow you to cancel all functions, see what function will be fired next, and see the number of funtions set to be called in the future. 
 
 ### Solution: 
-Create a node class to store when the function will be executed, a reference to the function. Allow the node to be created with a timeoutHandler and a reference to the next node.
+Create a node class to store when the function will be executed, and a reference to the function. Require that the node be instantiated with a timeoutHandler and a reference to the next node in the queue.
 
-Create a Scheduler class with a priority queue that uses a linked list to store nodes in the correct order. Store the count and a reference to the intervalHandler in the constructor.
+Create a Scheduler class with a count, intervalHanlder, and priority queue that uses a linked list to store nodes in the correct order as properties on the class.  
 
 ##### Methods:
 `schedule` 
@@ -25,7 +25,7 @@ Create a Scheduler class with a priority queue that uses a linked list to store 
   * first node in queue stores reference to the timeoutHandler that will expire first
   * increments count by 1
   * calls `startClearOut` if the queue was empty
-* return: reference to the queue
+* return: reference to the front node
 
 `numberOfScheduled`
 * return the count
@@ -36,7 +36,7 @@ Create a Scheduler class with a priority queue that uses a linked list to store 
 `clearOutQueue` 
 * action: 
   * checks the first item in the queue for the time when fired and removes it from queue if time has passed (meaning event has already fired)
-  * cancels the intervalHanlder if the queue is empty
+  * cancels the intervalHandler if the queue is empty
   * decrements count if items are cleared out
 
 Setup:
